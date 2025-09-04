@@ -64,9 +64,16 @@ git commit -m "Ignore フォルダ名"
 
 ### 2. 既に管理されている場合はキャッシュ削除
 git rm -r --cached フォルダ名
+
 git commit -m "Remove フォルダ名 from git tracking"
 
 ## 8. 変更差分の確認
 git diff            # ステージしていない差分
+
 git diff --staged   # ステージ済みの差分
 
+## 9. リモートの変更を確認したい場合
+
+git fetch origin
+
+git log origin/main --oneline
